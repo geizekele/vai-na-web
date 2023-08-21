@@ -1,9 +1,13 @@
 programa {
   funcao inicio() {
-    inteiro opcao
+    escreva("== BEM VINDO AO BANCO VAI NA WEB ==")
+    menu()    
+  }
+
+  funcao menu(){
+    inteiro opcao, continuar
     real dinheiro = 10, valor, saldo
 
-    escreva("== BEM VINDO AO BANCO VAI NA WEB ==")
     //faca{
       escreva("\n| Escolha uma das opções abaixo: |")
       escreva("\n| 1 - DEPOSITO                   |")
@@ -13,7 +17,6 @@ programa {
       escreva("\n==================================")
       escreva("\nOPÇÃO ESCOLHIDA: ")
       leia(opcao)
-   // } enquanto(opcao != 0)
 
     escolha(opcao){
       caso 1:
@@ -21,6 +24,15 @@ programa {
         leia(valor)
         escreva("OPERAÇÃO EFETUADA COM SUCESSO. Valor depositado R$", valor)
         escreva("\nValor atual: R$", dinheiro + valor)
+        escreva("\nDeseja continuar? 1- SIM e 2- NAO")
+        escreva("\nOpção: ")
+        leia(continuar)
+
+        se(continuar == 1){
+          inicio()
+        }senao{
+          escreva("Até mais. Volte sempre!")
+        }
       pare
 
       caso 2:
@@ -40,6 +52,15 @@ programa {
 
       caso 0:
         escreva("Até mais. Volte sempre!")
+      pare
     }
+
+    se(opcao >= 0 e opcao <=3){
+      menu()
+    }senao{
+      escreva("OPÇÃO INVÁLIDA! TENTE NOVAMENTE.")
+      menu()
+    }
+      
   }
 }
