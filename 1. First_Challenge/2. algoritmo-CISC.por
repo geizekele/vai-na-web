@@ -1,9 +1,11 @@
 programa {
 
-inteiro opcao, continua
-real dinheiro = 0, valor
+inteiro continua
+real dinheiro = 10, valor //A CONTA SERÁ INICIADA COM VALOR PRÉ-EXISTENTE DE R$10
 
-  funcao menu(){    
+  funcao menu(){  
+    inteiro opcao
+
       escreva("\n| Escolha uma das opções abaixo: |")
       escreva("\n| 1 - DEPOSITO                   |")
       escreva("\n| 2 - SAQUE                      |")
@@ -12,44 +14,43 @@ real dinheiro = 0, valor
       escreva("\n==================================")
       escreva("\nOPÇÃO ESCOLHIDA: ")
       leia(opcao)
-      conta()
+      conta(opcao)
   }
 
-  funcao conta(){ //FUNCAO QUE FARA A CHAMADA DA OPCAO SELECIONADA
+  funcao conta(inteiro opcao){ //FUNCAO QUE FARA A CHAMADA DA OPCAO SELECIONADA
     se(opcao == 1){
       escreva("Informe quanto deseja depositar: R$ ")
         leia(valor)
       escreva("OPERAÇÃO EFETUADA COM SUCESSO! Saldo atual R$ ", depositoSaque(dinheiro, valor, "DEPOSITO"))
         dinheiro += valor //ATUALIZA O VALOR DISPONIVEL NA CONTA ENQUANTO NAO SAIR DA OPERACAO
-        continuar()
+        retorne continuar()
     }
     se(opcao == 2){
-      escreva("Informe quanto deseja sacar: R$")
+      escreva("Informe quanto deseja sacar: R$ ")
         leia(valor)
-
       escreva("OPERAÇÃO EFETUADA COM SUCESSO! Saldo atual R$ ", depositoSaque(dinheiro, valor, "SAQUE"))
-        dinheiro -= valor
-        continuar()
+        dinheiro -= valor //ATUALIZA O VALOR DISPONIVEL NA CONTA ENQUANTO NAO SAIR DA OPERACAO
+        retorne continuar()
     }
     se(opcao == 3){
       escreva("Valor atual: R$", dinheiro)
-        continuar()
+        retorne continuar()
     }
     se(opcao == 0){
-      finalizar()
+      retorne finalizar()
     }
     senao{
     escreva("OPÇÃO INVÁLIDA! TENTE NOVAMENTE.") 
-      menu() //CASO ESTEJA FORA DAS OPÇOES, RETORNAR O MENU
+      retorne menu() //CASO ESTEJA FORA DAS OPÇOES, RETORNAR O MENU
     }
   }
 
-  funcao depositoSaque(real a, real b, cadeia tipo){
+  funcao depositoSaque(real a, real b, cadeia tipo){ //CORRESPONDE AOS PARAMETROS DINHEIRO, VALOR E TIPO DE OPERACAO
     se(tipo == "DEPOSITO"){
       retorne a + b
     }
     se(tipo == "SAQUE"){
-      se(dinheiro > valor){ //SE O VALOR EM CONTA FOR MAIOR QUE O VALOR DE SAQUE
+      se(a >= b){ //SE O VALOR EM CONTA (dinheiro) FOR MAIOR QUE O VALOR DE SAQUE (valor)
         retorne a - b
       }
       senao{
@@ -64,13 +65,13 @@ real dinheiro = 0, valor
     leia(continua)
 
     se(continua == 1){ //DESEJA CONTINUAR A OPERACAO
-      menu()
+      retorne menu()
     }
     se(continua == 2){ //NAO DESEJA CONTINUAR A OPERACAO
       retorne finalizar()
     }
     senao{ //CASO SEJA INSERIDO ALGO DIFERENTE DE 1 OU 2
-      escreva("OPCAO INVÁLIDA, DIGITE 1- SIM OU 2- NAO: ")
+      escreva("OPÇÃO INVÁLIDA! TENTE NOVAMENTE.")
       continuar()
     }
   }
