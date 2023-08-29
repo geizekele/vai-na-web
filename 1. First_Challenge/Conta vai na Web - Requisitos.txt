@@ -1,6 +1,6 @@
-#-- CONTA BANCARIA VAI NA WEB
+# CONTA BANCARIA VAI NA WEB
 
-##-- REQUISITOS
+## REQUISITOS
 	- Menu inicial, com as seguintes opções:
 		- Depósito
 		- Saque
