@@ -1,0 +1,17 @@
+1 - Os alunos deverão criar um vetor e utilizando a biblioteca inclua sorteio 10 números para serem armazenados.
+Esses números deverão ser impressos nos console
+
+2 - É necessário trazer um vetor onde nele está armazenado o nome de cada integrante do grupo.
+Os vetores precisam ser impressos no console na ordem em que forem inicializados e depois na ordem inversa.
+
+3 - inicialize um vetor com 10 numeros inteiros → peça para o usuário digitar um número 
+→ Através de uma estrutura condicional, verifique se o numero digitado pelo usuário existe no vetor 
+→ Se existir, imprimir uma mensagem de parabéns, senão, imprima uma mensagem informando que ele errou
+
+4 - Inicialize um vetor com 10 posições → Peça para o usuário digitar um valor 
+→ Faça seu algoritmo percorrer esse vetor e encontrar o número digitado 
+→ ATENÇÃO: No console deve ser impresso a seguinte frase “O numero que você procura está na posição x do vetor” 
+→ Caso o numero escolhido não faça parte do vetor informar no console
+
+5 - Crie dois vetores de 5 posições que contenha notas e nomes de alunos.
+No console deverá ser impresso o nome seguido da nota desses alunos.
