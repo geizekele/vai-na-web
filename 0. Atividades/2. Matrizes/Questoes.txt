@@ -1,0 +1,10 @@
+1. Inserira números em uma matriz 5x5 no momento em que ela for declarada→ Os números devem ser impressos no console
+
+2. Crie uma matriz e imprima o nome e o sobrenome dos participantes do grupo.
+
+
+3. Misture vetores e matrizes para criar uma tabela com nomes dos integrantes do grupo e 3 notas de cada. 
+os nomes devem estar em um vetor e as notas em uma matriz
+→ Exemplo: 
+notas do Samuel: [10][10][10]
+notas do Leno: [10][10][10]
