@@ -17,3 +17,5 @@ Os vetores precisam ser impressos no console na ordem em que forem inicializados
 No console deverá ser impresso o nome seguido da nota desses alunos.
 
 6 - Contar quantos numeros impares existem dentro do vetor
+
+7 - Somar os numeros dentro do vetor
