@@ -15,3 +15,5 @@ Os vetores precisam ser impressos no console na ordem em que forem inicializados
 
 5 - Crie dois vetores de 5 posições que contenha notas e nomes de alunos.
 No console deverá ser impresso o nome seguido da nota desses alunos.
+
+6 - Contar quantos numeros impares existem dentro do vetor
