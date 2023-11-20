@@ -1,0 +1,9 @@
+REGRAS DA MEGA SENA
+
+1. O usuario precisa/deve escolher 7 números de 0 a 100;
+2. Devem ser números inteiros;
+3. No final do programa, deve-se comparar os numeros escolhidos com os gerados pelo programa;
+4. PREMIOS:
+	- 5 números: 10 mil;
+	- 6 números: 50 mil;
+	- 7 números: 200 mil.
